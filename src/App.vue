@@ -1,17 +1,24 @@
 <template>
-  <div id="app">
+<b-container>
+  <b-row>
     <h1>{{ title }}</h1>
+  </b-row>
+  <b-row>
     <HelloWorld msg="Hello!"/>
-    <div class="horas">
+  </b-row>
+  <b-row>
       <p v-if="horas < 12">Está de dia!</p>
       <p v-if="horas >= 12 && horas < 18">Está de tarde!</p>
       <p v-if="horas >= 18">Está de noite!</p>
-    </div>
-  </div>
+  </b-row>
+</b-container>
 </template>
 
 <script>
+import 'bootstrap/dist/css/bootstrap.css'
+import 'bootstrap-vue/dist/bootstrap-vue.css'
 import HelloWorld from './components/HelloWorld.vue'
+
 
 export default {
   name: 'App',
@@ -27,12 +34,7 @@ export default {
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+  .row {
+    justify-content: center;
+  }
 </style>
